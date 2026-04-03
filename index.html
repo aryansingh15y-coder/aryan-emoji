@@ -129,6 +129,30 @@ function generate() {
     });
 }
 </script>
+<script>
+function generate() {
+    let name = document.getElementById("name").value || "Aryan";
 
+    let styles = [
+        "『" + name + "』","乂 " + name + " 乂","彡 " + name + " 彡",
+        "★ " + name + " ★","✦ " + name + " ✦","♛ " + name + " ♛",
+        "⚡ " + name + " ⚡","⎝ " + name + " ⎠","⫷ " + name + " ⫸",
+        "۝ " + name + " ۝","◥ " + name + " ◤","✧ " + name + " ✧",
+        "♕ " + name + " ♕","⚔ " + name + " ⚔","⦿ " + name + " ⦿"
+    ];
+
+    styles.sort(() => Math.random() - 0.5);
+
+    let result = document.getElementById("result");
+    result.innerHTML = "";
+
+    styles.forEach(s => {
+        let div = document.createElement("div");
+        div.className = "box";
+        div.innerText = s;
+        result.appendChild(div);
+    });
+}
+</script>
 </body>
 </html>
