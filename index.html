@@ -66,7 +66,23 @@ button {
     width: 80%;
     box-shadow: 0 0 10px #00f0ff;
     cursor: pointer;
+}body::after {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(128,0,255,0.2) 0%, transparent 60%);
+    animation: shadowMove 8s linear infinite;
+    z-index: -1;
 }
+
+@keyframes shadowMove {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(20%, 20%) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+        }
 </style>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
